@@ -2,11 +2,30 @@
 
 > An analysis of hotel booking performance, reservation outcomes, hotel type, guest origin, and booking volume by arrival month.
 
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Problem Statement](#2-problem-statement)
+3. [Data Sourcing](#3-data-sourcing)
+4. [Data Transformation and Cleaning](#4-data-transformation-and-cleaning)
+5. [Analytical Measures](#5-analytical-measures)
+6. [Dashboard and Visuals](#6-dashboard-and-visuals)
+7. [General Insights](#7-general-insights)
+8. [Recommendations](#8-recommendation)
+9. [Conclusion](#9-conclusion)
+10. [Author](#10-author)
+
+
 ## 1. Introduction
 
 This project analyzes hotel booking records to understand booking volume and the outcomes of reservations across City Hotels and Resort Hotels. The accompanying dashboard summarizes total bookings, completed stays, cancellations, no-shows, country of origin, and monthly arrival patterns.
 
 This analysis covers **119,208 total bookings**: **75,010 completed stays (Check-Out)** and **44,198 non-completions** (cancellations and no-shows). 
+
+<img width="1346" height="751" alt="Screenshot (86)" src="https://github.com/user-attachments/assets/4b133cdb-80b1-4331-b375-883b8dbcd1da" />
+
+
+
 
 ## 2. Problem Statement
 
@@ -31,8 +50,21 @@ Almeida, and Luis Nunes for Data in Brief, Volume 22, February 2019.
 1. **Excel — initial inspection:** I reviewed the dataset structure, columns, sample values, and apparent data quality issues.
 2. **Google Colab — cleaning:** I cleaned and transformed the data for analysis. where I treat  missing values, data types, duplicates.
 
-    **view of the cleaned dataset on MS EXCEL**
 
+### Data Cleaning Summary
+
+The dataset initially contained **119,390 rows and 36 columns**. I filtered out **182 rows** identified as having zero guests or as outliers. The cleaned dataset contains **119,208 rows and 36 columns**.
+
+| Metric | Value |
+|---|---:|
+| Initial total rows | 119,390 |
+| Cleaned total rows | 119,208 |
+| Initial total columns | 36 |
+| Cleaned total columns | 36 |
+| Rows filtered (zero guests/outliers) | 182 |
+
+
+    **view of the cleaned dataset on MS EXCEL**
 <img width="1920" height="1010" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/5b9c6f81-384e-4eec-9952-b779005dea8e" />
 
 3. **Power Query — validation:** I performed additional checks on the prepared dataset to confirm that fields and values were suitable for reporting before loading it into Power-BI for visualization.
