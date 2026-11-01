@@ -64,7 +64,7 @@ The dataset initially contained **119,390 rows and 36 columns**. I filtered out 
 | Rows filtered (zero guests/outliers) | 182 |
 
 
-    **view of the cleaned dataset on MS EXCEL**
+   **view of the cleaned dataset on MS EXCEL**
 <img width="1920" height="1010" alt="Screenshot (87)" src="https://github.com/user-attachments/assets/5b9c6f81-384e-4eec-9952-b779005dea8e" />
 
 3. **Power Query — validation:** I performed additional checks on the prepared dataset to confirm that fields and values were suitable for reporting before loading it into Power-BI for visualization.
@@ -75,6 +75,62 @@ The dataset initially contained **119,390 rows and 36 columns**. I filtered out 
 
 
 ## 5. Analytical Measures
+
+## Measures and Calculations
+
+I created DAX measures in Power BI to summarize bookings and reservation outcomes. The measures use the `reservation_status` field in the `Cleaned_Data` table. Each row is assumed to represent one booking.
+
+### Total Bookings
+
+Counts all booking records.
+
+```DAX
+Total Bookings =
+COUNTROWS('Cleaned_Data')
+```
+
+### Completed Stays
+Counts bookings with a Check-Out reservation status.
+
+```DAX
+Completed Stays =
+CALCULATE(
+    [Total Bookings],
+    'Cleaned_Data'[reservation_status] = "Check-Out")
+```
+
+### Canceled and No-Show Bookings 
+Counts bookings with either a Canceled or No-Show status.
+
+```DAX
+Canceled and No-Show Bookings =
+CALCULATE(
+    [Total Bookings],
+    'Cleaned_Data'[reservation_status] IN {"Canceled", "No-Show"})
+```
+
+### Non-Completion Rate
+The dashboard displays 37.08% for cancellations. This value is calculated using both canceled bookings and no-shows, so I describe it here as the Non-Completion Rate.
+
+```DAX
+Non-Completion Rate =
+DIVIDE(
+    [Canceled and No-Show Bookings],
+    [Total Bookings],
+    0)
+```
+
+
+### Completed Stay Rate
+Calculates the share of bookings that resulted in a completed stay. The dashboard displays 62.92%.
+
+```DAX
+Completed Stay Rate =
+DIVIDE(
+    [Completed Stays],
+    [Total Bookings],
+    0)
+``` 
 
 | Measure | Dashboard value | Meaning |
 |---|---:|---|
