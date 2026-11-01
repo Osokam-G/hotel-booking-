@@ -234,10 +234,10 @@ August has the highest booking volume in the chart, while January has the lowest
 
 ## 9. Conclusion
 
-This project provides a consolidated view of hotel booking volume and reservation outcomes. The dashboard shows that completed stays make up 62.92% of the 119,208 bookings, while 37.08% ended in cancellation or no-show. Hotel type, guest country, and arrival month provide useful starting points for deeper analysis. Follow-up work should focus on normalized rates, validated date ordering, and documented data-quality rules before drawing causal conclusions.
+This project provides a consolidated view of hotel booking volume and reservation outcomes. The Analysis shows that completed stays make up 62.92% of the 119,208 bookings, while 37.08% ended in cancellation or no-show. Hotel type, guest country, and arrival month provide useful starting points for deeper analysis. Follow-up work should focus on normalized rates, validated date ordering, and documented data-quality rules before drawing causal conclusions.
 
 ## 10. Author
 
 **OSOKAM GIFT**  
-[LinkedIn](add-your-link) · [Portfolio](add-your-link) · [GitHub](add-your-link)
+[LinkedIn](https://www.linkedin.com/in/osokam-gift-375124291?utm_source=share_via&utm_content=profile&utm_medium=member_android) · [Portfolio](add-your-link) · [GitHub](add-your-link)
 
